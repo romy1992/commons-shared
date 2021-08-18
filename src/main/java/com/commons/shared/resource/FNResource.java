@@ -35,7 +35,7 @@ public abstract class FNResource<M, K, E, R extends JpaRepository<?, ?>, C exten
   public abstract boolean deleteById(@PathVariable("primaryKey") K primaryKey);
 
   @GetMapping(value = "getAll/entities/{id}")
-  public abstract List<M> getAll(@PathVariable("primaryKey") K primaryKey);
+  public abstract List<M> getAll(@PathVariable("id") K primaryKey);
 
   @PostMapping("search")
   public abstract List<M> search(M model);
