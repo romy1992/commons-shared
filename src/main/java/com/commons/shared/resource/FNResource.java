@@ -1,6 +1,5 @@
 package com.commons.shared.resource;
 
-import com.commons.shared.mapper.FNMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +15,7 @@ import java.util.List;
       "http://localhost:8201",
       "http://localhost"
     })
-public abstract class FNResource<M, K, E, R extends JpaRepository<?, ?>, C extends FNMapper> {
+public abstract class FNResource<M, K, E, R extends JpaRepository<?, ?>, C> {
 
   @Autowired protected R repository;
 
